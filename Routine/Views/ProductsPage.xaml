@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="productsPage"
+             x:Class="Routine.Views.ProductsPage"
+             Title="Products catalogue">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddProductCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}" HasUnevenRows="True" SeparatorColor="Pink" ItemSelected="OnProductSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell ImageSource="{Binding ProductImage}" Text="{Binding ProductName}" Detail="{Binding Brand}" DetailColor="Black" TextColor="Pink">
+                    <ImageCell.ContextActions>
+                        <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference productsPage}, Path=ViewModel.DeleteProductCommand}" CommandParameter="{Binding .}"/>
+                    </ImageCell.ContextActions>
+                </ImageCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

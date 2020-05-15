@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Routine.Views;
+using Routine.ViewModels;
 
 namespace Routine
 {
@@ -11,7 +12,7 @@ namespace Routine
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Registration(new UserViewModel()));
         }
 
         protected override void OnStart()

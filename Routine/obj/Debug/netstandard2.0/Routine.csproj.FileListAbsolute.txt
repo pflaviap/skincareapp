@@ -16,3 +16,4 @@ C:\Users\popfl\Desktop\Facultate\An3sem2\Licenta\MVVM\Routine\Routine\Routine\ob
 C:\Users\popfl\Desktop\Facultate\An3sem2\Licenta\MVVM\Routine\Routine\Routine\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\Users\popfl\Desktop\Facultate\An3sem2\Licenta\MVVM\Routine\Routine\Routine\obj\Debug\netstandard2.0\Views\RoutinePage.xaml.g.cs
 C:\Users\popfl\Desktop\Facultate\An3sem2\Licenta\MVVM\Routine\Routine\Routine\obj\Debug\netstandard2.0\Views\RoutineFormPage.xaml.g.cs
+C:\Users\popfl\Desktop\Facultate\An3sem2\Licenta\MVVM\Routine\Routine\Routine\obj\Debug\netstandard2.0\Views\Registration.xaml.g.cs
