@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlowOn.Views.Steps.RoutinePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="A correct skin care routine is always composed of at least 4 steps. Select each option below in order to find out more about them." 
+                        FontSize="20" FontFamily="Roboto" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#660066"/>
+            <Button x:Name="btnRemover" Clicked="Step1Clicked" Text="Step one: remove your makeup"/>
+            <Button x:Name="btnCleanser" Clicked="Step2Clicked" Text="Step two: wash your face"/>
+            <Button x:Name="btnHydratingCream" Clicked="Step3Clicked" Text="Step three: use hydrating cream"/>
+            <Button x:Name="btnSPF" Clicked="Step4Clicked" Text="Step four: always use solar protection"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

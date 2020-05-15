@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlowOn.Views.HydratingCreamsDisplayer"
+             Title="Hydrating Creams">
+    <ScrollView>
+        <StackLayout Spacing="0" Padding="0" BackgroundColor="#ECDEFC">
+            <StackLayout>
+                <Frame CornerRadius="10" Padding="4" BorderColor="#660066" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3">
+                    <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="#F2E6FF">
+                        <Label Text="About your skin" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#660066"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label FontSize="18" Text="Skin type:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding eUsers}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextCell Text="{Binding SkinType}" TextColor="#660066"></TextCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label FontSize="18" Text="Sensitive:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextCell Text="{Binding IsSensitive}" TextColor="#660066"></TextCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label FontSize="18" Text="Age category:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
+                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextCell Text="{Binding AgeCategory}" TextColor="#660066"></TextCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                        <Button x:Name="getCharacteristics" Clicked="ChangeCharacteristicsClicked" Text="Change your characteristics" BackgroundColor="#660066" TextColor="#F2E6FF"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <Label Text="Hydrating Creams" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#660066"/>
+                    <Frame CornerRadius="10" Padding="4" BorderColor="#660066" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3">
+                        <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="#F2E6FF">
+                            <Label FontSize="18" Text="Products:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
+                            <CarouselView HorizontalOptions="FillAndExpand" ItemsSource="{Binding HydratingCreams}">
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#660066"></Label>
+                                            <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#660066"></Label>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

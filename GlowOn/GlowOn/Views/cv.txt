@@ -1,0 +1,5 @@
+
+            List<int> ids = new List<int>();
+            var products = _productCatalogue.GetProductsAsync();
+            foreach (var product in products)
+                 ids.Add(product.ID);

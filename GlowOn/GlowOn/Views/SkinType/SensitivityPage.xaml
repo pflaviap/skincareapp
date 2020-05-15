@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlowOn.Views.SkinType.SensitivityPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Sensitivity quiz" FontSize="28" FontFamily="Times New Roman" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#660066"/>
+                <Label Text="When you try a new product, does your skin usually react negatively?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#660066"/>
+                <Picker Title="Select an option"
+                    ItemsSource="{Binding Q1Options}"
+                    ItemDisplayBinding="{Binding Description}"
+                    SelectedItem="{Binding SelectedQ1}" />
+                <Label Text="After washing your face, is it usually red, irritated, even burning at times?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#660066"/>
+                <Picker Title="Select an option"
+                    ItemsSource="{Binding Q2Options}"
+                    ItemDisplayBinding="{Binding Description}"
+                    SelectedItem="{Binding SelectedQ2}" />
+                <Label Text="Can you sometimes spot dry patches?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#660066"/>
+                <Picker Title="Select an option"
+                    ItemsSource="{Binding Q3Options}"
+                    ItemDisplayBinding="{Binding Description}"
+                    SelectedItem="{Binding SelectedQ3}" />
+                <Label Text="Do sunrays make your skin rash after only a few minutes of contact?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#660066"/>
+                <Picker Title="Select an option"
+                    ItemsSource="{Binding Q4Options}"
+                    ItemDisplayBinding="{Binding Description}"
+                    SelectedItem="{Binding SelectedQ4}" />
+                <Label Text="Does your skin break out easily?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#660066"/>
+                <Picker Title="Select an option"
+                    ItemsSource="{Binding Q5Options}"
+                    ItemDisplayBinding="{Binding Description}"
+                    SelectedItem="{Binding SelectedQ5}" />
+                <Button x:Name="btnResult" Command="{Binding ResultsCommand}" Text="Get results"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
