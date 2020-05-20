@@ -14,9 +14,9 @@ namespace GlowOn
 
             MainPage = new NavigationPage(new MainPage())
             {
-                BarBackgroundColor = Color.FloralWhite,
-                BarTextColor = Color.DeepPink
-            };
+                BarBackgroundColor = Color.FromHex("#CD1954"),
+                BarTextColor = Color.FloralWhite
+        };
         }
 
         protected override void OnStart()

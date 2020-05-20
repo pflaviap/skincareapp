@@ -18,6 +18,7 @@ namespace GlowOn.Views
         public ProductsDetail(ProductViewModel viewModel)
         {
             InitializeComponent();
+            imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
             var productStore = new SQLiteProductCatalogue(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             Title = (viewModel.ProductName == null) ? "New Product" : "Edit Product";

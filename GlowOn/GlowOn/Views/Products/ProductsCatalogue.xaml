@@ -10,10 +10,11 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddProductCommand}"/>
     </ContentPage.ToolbarItems>
-    <ScrollView>
-        <StackLayout>
-            <SearchBar Placeholder="Search products..." SearchCommand="{Binding SearchCommand}" CancelButtonColor="HotPink" PlaceholderColor="Black" TextColor="Honeydew" HorizontalTextAlignment="Center" FontSize="22"></SearchBar>
-            <ListView ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}" HasUnevenRows="True" SeparatorColor="Pink" ItemSelected="OnProductSelected">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
+            <SearchBar Placeholder="Search products..." SearchCommand="{Binding SearchCommand}" CancelButtonColor="HotPink" PlaceholderColor="Black" TextColor="Honeydew" HorizontalTextAlignment="Center" FontSize="22" BackgroundColor="Transparent"></SearchBar>
+            <ListView ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}" HasUnevenRows="True" SeparatorColor="Pink" ItemSelected="OnProductSelected" BackgroundColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell ImageSource="{Binding ProductImage}" Text="{Binding ProductName}" Detail="{Binding Brand}" DetailColor="Black" TextColor="Pink">
@@ -25,5 +26,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-    </ScrollView>
+    </AbsoluteLayout>
 </ContentPage>

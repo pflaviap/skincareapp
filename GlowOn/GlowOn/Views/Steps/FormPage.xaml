@@ -6,20 +6,26 @@
              mc:Ignorable="d"
              x:Class="GlowOn.Views.FormPage"
              Title="Details">
-    <TableView Intent="Form" Margin="16,0">
-        <TableRoot>
-            <TableSection Title="About you">
-                <TextCell Text="Fill in the right age cathegory from the list: 10-18, 19-29, 30-50 and 50+ and "/>
-                <EntryCell Label="Age Category: " Text="{Binding Path=User.AgeCategory}"/>
-                <TextCell Text="Please choose a skintype from the "/>
-                <EntryCell Label="Skintype: " Text="{Binding Path=User.SkinType}"/>
-                <SwitchCell Text="Skin sensitivity: " On="{Binding Path=User.IsSensitive}"/>
-            </TableSection>
-            <TableSection>
-                <ViewCell>
-                    <Button Text="Save changes" Command="{Binding SaveCommand}"/>
-                </ViewCell>
-            </TableSection>
-        </TableRoot>
-    </TableView>
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
+
+            <TableView Intent="Form" Margin="16,0" BackgroundColor="Transparent">
+                <TableRoot>
+                    <TableSection Title="About you" >
+                        <TextCell Text="Fill in the right age cathegory from the list: 10-18, 19-29, 30-50 and 50+ and " />
+                        <EntryCell Label="Age Category: " Text="{Binding Path=User.AgeCategory}"/>
+                        <TextCell Text="Please choose a skintype from the "/>
+                        <EntryCell Label="Skintype: " Text="{Binding Path=User.SkinType}"/>
+                        <SwitchCell Text="Skin sensitivity: " On="{Binding Path=User.IsSensitive}"/>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <Button Text="Save changes" Command="{Binding SaveCommand}"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

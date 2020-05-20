@@ -17,6 +17,8 @@ namespace GlowOn.Views.SkinType
         public SensitivityPage()
         {
             InitializeComponent();
+            imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
+            btnResult.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnGetResults.png");
             var pageService = new PageService();
             BindingContext = new SensitivityViewModel(pageService);
         }

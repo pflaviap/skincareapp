@@ -4,51 +4,49 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Skin type quiz"
              x:Class="GlowOn.Views.SkinTypePage">
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <Label Text="Skintype quiz" FontSize="28" FontFamily="Times New Roman" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Label Text="What does your skin look like an hour after you wash it?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Picker Title="Select an option"
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="Skintype quiz" FontSize="28" FontFamily="Times New Roman" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Label Text="What does your skin look like an hour after you wash it?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Picker Title="Select an option"
                     ItemsSource="{Binding Q1Options}"
                     ItemDisplayBinding="{Binding Description}"
                     SelectedItem="{Binding SelectedQ1}" />
-                <Label Text="After wearing foundation for a few hours, how does it look on your face?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Picker Title="Select an option"
+            <Label Text="After wearing foundation for a few hours, how does it look on your face?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Picker Title="Select an option"
                     ItemsSource="{Binding Q2Options}"
                     ItemDisplayBinding="{Binding Description}"
                     SelectedItem="{Binding SelectedQ2}" />
-                <Label Text="Which description best describes your pores?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Picker Title="Select an option"
+            <Label Text="Which description best describes your pores?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Picker Title="Select an option"
                     ItemsSource="{Binding Q3Options}"
                     ItemDisplayBinding="{Binding Description}"
                     SelectedItem="{Binding SelectedQ3}" />
-                <Label Text="How often do you feel like moisturizing your face?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Picker Title="Select an option"
+            <Label Text="How often do you feel like moisturizing your face?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Picker Title="Select an option"
                     ItemsSource="{Binding Q4Options}"
                     ItemDisplayBinding="{Binding Description}"
                     SelectedItem="{Binding SelectedQ4}" />
-                <Label Text="Which is your number #1 skin concern?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Picker Title="Select an option"
+            <Label Text="Which is your number #1 skin concern?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Picker Title="Select an option"
                     ItemsSource="{Binding Q5Options}"
                     ItemDisplayBinding="{Binding Description}"
                     SelectedItem="{Binding SelectedQ5}" />
-                    <Label Text="How often can you spot pimples/blackheads?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#660066"/>
-                <Picker Title="Select an option"
+            <Label Text="How often can you spot pimples/blackheads?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Picker Title="Select an option"
                     ItemsSource="{Binding Q6Options}"
                     ItemDisplayBinding="{Binding Description}"
                     SelectedItem="{Binding SelectedQ6}" />
-                <Button x:Name="btnResult" Command="{Binding ResultsCommand}" Text="Get results"></Button>
-            </StackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+            <ImageButton x:Name="btnResult" Command="{Binding ResultsCommand}" BackgroundColor="Transparent" WidthRequest="130" HeightRequest="80"></ImageButton>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

@@ -6,66 +6,65 @@
              mc:Ignorable="d"
              x:Class="GlowOn.Views.SPFsDisplayer"
              Title="Solar Protection Creams">
-    <ScrollView>
-        <StackLayout Spacing="0" Padding="0" BackgroundColor="#ECDEFC">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
+            <Frame CornerRadius="10" Padding="4" BorderColor="#CD1954" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
+                <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Transparent">
+                    <Label Text="About your skin" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#CD1954"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" Text="Skin type:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+                        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding SkinType}" TextColor="#CD1954"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" Text="Sensitive:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+                        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding IsSensitive}" TextColor="#CD1954"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" Text="Age category:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
+                        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding AgeCategory}" TextColor="#CD1954"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <ImageButton x:Name="btnAttributes" Clicked="ChangeAttributesClicked" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="80"/>
+                </StackLayout>
+            </Frame>
             <StackLayout>
-                <Frame CornerRadius="10" Padding="4" BorderColor="#660066" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3">
-                    <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="#F2E6FF">
-                        <Label Text="About your skin" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
-                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#660066"/>
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontSize="18" Text="Skin type:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
-                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextCell Text="{Binding SkinType}" TextColor="#660066"></TextCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontSize="18" Text="Sensitive:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
-                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextCell Text="{Binding IsSensitive}" TextColor="#660066"></TextCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontSize="18" Text="Age category:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
-                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextCell Text="{Binding AgeCategory}" TextColor="#660066"></TextCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <Button x:Name="getCharacteristics" Clicked="ChangeCharacteristicsClicked" Text="Change your characteristics" BackgroundColor="#660066" TextColor="#F2E6FF"/>
+                <Label Text="Sun Protection Creams" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#CD1954"/>
+                <Frame CornerRadius="10" Padding="4" BorderColor="#CD1954" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
+                    <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Transparent">
+                        <Label FontSize="18" Text="Products:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
+                        <CarouselView ItemsSource="{Binding SPFs}">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#CD1954"></Label>
+                                        <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#CD1954"></Label>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
                     </StackLayout>
                 </Frame>
-                <StackLayout>
-                    <Label Text="Sun Protection Creams" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
-                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#660066"/>
-                    <Frame CornerRadius="10" Padding="4" BorderColor="#660066" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3">
-                        <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="#F2E6FF">
-                            <Label FontSize="18" Text="Products:" TextColor="#660066" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
-                            <CarouselView ItemsSource="{Binding SPFs}">
-                                <CarouselView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackLayout>
-                                            <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#660066"></Label>
-                                            <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#660066"></Label>
-                                        </StackLayout>
-                                    </DataTemplate>
-                                </CarouselView.ItemTemplate>
-                            </CarouselView>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
             </StackLayout>
         </StackLayout>
-    </ScrollView>
+    </AbsoluteLayout>
 </ContentPage>

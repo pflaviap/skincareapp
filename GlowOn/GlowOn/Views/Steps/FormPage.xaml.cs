@@ -18,6 +18,7 @@ namespace GlowOn.Views
         public FormPage(UserViewModel viewModel)
         {
             InitializeComponent();
+            imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
             var user = new SQLiteUsers(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             BindingContext = new FormViewModel(new UserViewModel(), user, pageService);

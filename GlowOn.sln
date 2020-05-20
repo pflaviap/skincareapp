@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlowOn.Android", "GlowOn\GlowOn.Android\GlowOn.Android.csproj", "{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlowOn", "GlowOn\GlowOn\GlowOn.csproj", "{DB6558D3-9EA7-438D-B674-C181C678F30A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE031C7-199D-44BE-86A1-CC2DC8AF10A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DB6558D3-9EA7-438D-B674-C181C678F30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6558D3-9EA7-438D-B674-C181C678F30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB6558D3-9EA7-438D-B674-C181C678F30A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DB6558D3-9EA7-438D-B674-C181C678F30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6558D3-9EA7-438D-B674-C181C678F30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB6558D3-9EA7-438D-B674-C181C678F30A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {961FE111-0B80-4D56-B12A-2728098A6145}
+	EndGlobalSection
+EndGlobal

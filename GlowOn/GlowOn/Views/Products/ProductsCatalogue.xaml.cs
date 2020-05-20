@@ -17,10 +17,11 @@ namespace GlowOn.Views
     {
         public ProductsCatalogue()
         {
+            InitializeComponent();
+            imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
             var productCatalogue = new SQLiteProductCatalogue(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             ViewModel = new ProductsCatalogueViewModel(productCatalogue, pageService);
-            InitializeComponent();
         }
 
         protected override void OnAppearing()

@@ -18,13 +18,15 @@ namespace GlowOn.Views
         public SPFsDisplayer()
         {
             InitializeComponent();
+            imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
+            btnAttributes.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnAttributes.png");
             var routineUsers = new SQLiteUsers(DependencyService.Get<ISQLiteDb>());
             var products = new SQLiteProductCatalogue(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             ViewModel = new DisplayerViewModel(routineUsers, products, pageService, "SPF");
         }
 
-        private async void ChangeCharacteristicsClicked(object sender, EventArgs e)
+        private async void ChangeAttributesClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FormPage(new UserViewModel()));
         }

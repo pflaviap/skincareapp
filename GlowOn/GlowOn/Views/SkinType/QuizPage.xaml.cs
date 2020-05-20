@@ -8,7 +8,7 @@ using GlowOn.Views.SkinType;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace GlowOn.Views
+namespace GlowOn.Views.SkinType
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuizPage : ContentPage

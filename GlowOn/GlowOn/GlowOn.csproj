@@ -12,16 +12,26 @@
 
   <ItemGroup>
     <None Remove="Assets\Images\background.jpg" />
+    <None Remove="Assets\Images\btnAttributes.png" />
     <None Remove="Assets\Images\btnCatalogue.png" />
+    <None Remove="Assets\Images\btnCleanser.png" />
+    <None Remove="Assets\Images\btnGetResults.png" />
+    <None Remove="Assets\Images\btnMakeupRemover.png" />
+    <None Remove="Assets\Images\btnMoisturizer.png" />
     <None Remove="Assets\Images\btnRoutine.png" />
     <None Remove="Assets\Images\btnSensitivityQuiz.png" />
     <None Remove="Assets\Images\btnSkintype.png" />
     <None Remove="Assets\Images\btnSkintypeQuiz.png" />
+    <None Remove="Assets\Images\btnSPF.png" />
     <None Remove="Assets\Images\logo.png" />
     <None Remove="Views\cv.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\btnAttributes.png" />
+    <EmbeddedResource Include="Assets\Images\btnCleanser.png" />
+    <EmbeddedResource Include="Assets\Images\btnGetResults.png" />
+    <EmbeddedResource Include="Assets\Images\btnMoisturizer.png" />
     <EmbeddedResource Include="Assets\Images\btnSensitivityQuiz.png" />
   </ItemGroup>
 
@@ -31,6 +41,8 @@
     <EmbeddedResource Include="Assets\Images\btnRoutine.png" />
     <EmbeddedResource Include="Assets\Images\btnSkintype.png" />
     <EmbeddedResource Include="Assets\Images\btnSkintypeQuiz.png" />
+    <EmbeddedResource Include="Assets\Images\btnMakeupRemover.png" />
+    <EmbeddedResource Include="Assets\Images\btnSPF.png" />
     <EmbeddedResource Include="Assets\Images\logo.png" />
   </ItemGroup>
 

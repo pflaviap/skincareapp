@@ -15,6 +15,11 @@ namespace GlowOn.Views.Steps
         public RoutinePage()
         {
             InitializeComponent();
+            imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
+            btnMakeupRemover.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnMakeupRemover.png");
+            btnCleanser.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnCleanser.png");
+            btnMoisturizer.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnMoisturizer.png");
+            btnSPF.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnSPF.png");
         }
         private async void Step1Clicked(object sender, EventArgs e)
         {

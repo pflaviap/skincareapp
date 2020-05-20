@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using GlowOn.Views.Steps;
-using GlowOn.ViewModels;
+using GlowOn.Views.SkinType;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

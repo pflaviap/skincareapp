@@ -40,60 +40,68 @@ namespace GlowOn.ViewModels.Pages
 
         async Task DisplayResult()
         {
-            SelectedOptions.Add(SelectedQ1);
-            SelectedOptions.Add(SelectedQ2);
-            SelectedOptions.Add(SelectedQ3);
-            SelectedOptions.Add(SelectedQ4);
-            SelectedOptions.Add(SelectedQ5);
-            SelectedOptions.Add(SelectedQ6);
-
-            int counterA = 0;
-            int counterB = 0;
-            int counterC = 0;
-            int counterD = 0;
-
-            foreach (Option sOption in SelectedOptions)
+            if (SelectedQ1 == null || SelectedQ2 == null || SelectedQ3 == null || SelectedQ4 == null || SelectedQ5 == null || SelectedQ6 == null)
             {
-                if (sOption.letter == "A")
-                    counterA = counterA + 1;
-                else if (sOption.letter == "B")
-                    counterB = counterB + 1;
-                else if (sOption.letter == "C")
-                    counterC = counterC + 1;
-                else if (sOption.letter == "D")
-                    counterD = counterD + 1;
-            }
-
-            if (counterA > counterB && counterA > counterC && counterA > counterD)
-            {
-                await _pageService.DisplayAlert("So rare!", "Your skin is definitely normal", "Thank you");
-                SelectedOptions.Clear();
-                return;
-            }
-            else if (counterB > counterA && counterB > counterC && counterB > counterD)
-            {
-                await _pageService.DisplayAlert("Hydration is key", "Your skin is definitely dry", "Thank you");
-                SelectedOptions.Clear();
-                return;
-            }
-            else if (counterC > counterA && counterC > counterB && counterC > counterD)
-            {
-                await _pageService.DisplayAlert("Greasy but cute", "Your skin is definitely oily", "Thank you");
-                SelectedOptions.Clear();
-                return;
-            }
-            else if (counterD > counterA && counterD > counterB && counterD > counterC)
-            {
-                await _pageService.DisplayAlert("The best of both worlds", "Your skin is definitely combination", "Thank you");
-                SelectedOptions.Clear();
+                await _pageService.DisplayAlert("Error", "Please answer all questions.", "OK");
                 return;
             }
             else
             {
+                SelectedOptions.Add(SelectedQ1);
+                SelectedOptions.Add(SelectedQ2);
+                SelectedOptions.Add(SelectedQ3);
+                SelectedOptions.Add(SelectedQ4);
+                SelectedOptions.Add(SelectedQ5);
+                SelectedOptions.Add(SelectedQ6);
+
+                int counterA = 0;
+                int counterB = 0;
+                int counterC = 0;
+                int counterD = 0;
+
+                foreach (Option sOption in SelectedOptions)
                 {
-                    await _pageService.DisplayAlert("Oops", "We can't really figure it out. Please thing better and try again:)", "Sorry!");
+                    if (sOption.letter == "A")
+                        counterA = counterA + 1;
+                    else if (sOption.letter == "B")
+                        counterB = counterB + 1;
+                    else if (sOption.letter == "C")
+                        counterC = counterC + 1;
+                    else if (sOption.letter == "D")
+                        counterD = counterD + 1;
+                }
+
+                if (counterA > counterB && counterA > counterC && counterA > counterD)
+                {
+                    await _pageService.DisplayAlert("So rare!", "Your skin is definitely normal", "Thank you");
                     SelectedOptions.Clear();
                     return;
+                }
+                else if (counterB > counterA && counterB > counterC && counterB > counterD)
+                {
+                    await _pageService.DisplayAlert("Hydration is key", "Your skin is definitely dry", "Thank you");
+                    SelectedOptions.Clear();
+                    return;
+                }
+                else if (counterC > counterA && counterC > counterB && counterC > counterD)
+                {
+                    await _pageService.DisplayAlert("Greasy but cute", "Your skin is definitely oily", "Thank you");
+                    SelectedOptions.Clear();
+                    return;
+                }
+                else if (counterD > counterA && counterD > counterB && counterD > counterC)
+                {
+                    await _pageService.DisplayAlert("The best of both worlds", "Your skin is definitely combination", "Thank you");
+                    SelectedOptions.Clear();
+                    return;
+                }
+                else
+                {
+                    {
+                        await _pageService.DisplayAlert("Oops", "We can't really figure it out. Please thing better and try again:)", "Sorry!");
+                        SelectedOptions.Clear();
+                        return;
+                    }
                 }
             }
         }
