@@ -16,7 +16,6 @@ namespace GlowOn.ViewModels.Pages
         private IUsers _user;
         private IProductCatalogue _productCatalogue;
         private IPageService _pageService;
-
         public ObservableCollection<UserViewModel> Users { get; private set; }
             = new ObservableCollection<UserViewModel>();
 
@@ -26,11 +25,12 @@ namespace GlowOn.ViewModels.Pages
         public ObservableCollection<ProductViewModel> Cleansers { get; private set; }
             = new ObservableCollection<ProductViewModel>();
 
-        public ObservableCollection<ProductViewModel> HydratingCreams { get; private set; }
+        public ObservableCollection<ProductViewModel> Moisturizers { get; private set; }
             = new ObservableCollection<ProductViewModel>();
 
         public ObservableCollection<ProductViewModel> SPFs { get; private set; }
             = new ObservableCollection<ProductViewModel>();
+        public IList<Product> ProductsL { get { return ProductData.Products; } }
 
         public ICommand LoadDataCommand { get; private set; }
         public ICommand SubmitFormCommand { get; private set; }
@@ -44,6 +44,11 @@ namespace GlowOn.ViewModels.Pages
             LoadDataCommand = new Command(async () => await LoadData(Category));
             SubmitFormCommand = new Command(async () => await SubmitForm());
 
+            foreach (Product p in ProductsL)
+            {
+                _productCatalogue.AddOrReplace(p);
+            }
+
             MessagingCenter.Subscribe<FormViewModel>
                 (this, Events.UsersDeleted, OnUsersDeleted);
 
@@ -56,7 +61,7 @@ namespace GlowOn.ViewModels.Pages
             Users.Clear();
             MakeupRemovers.Clear();
             Cleansers.Clear();
-            HydratingCreams.Clear();
+            Moisturizers.Clear();
             SPFs.Clear();
         }
         private void OnUserAdded(FormViewModel source, User user)
@@ -74,14 +79,14 @@ namespace GlowOn.ViewModels.Pages
                 Users.Add(new UserViewModel(user));
                 foreach (var product in products)
                 {
-                    if (product.SkinType == user.SkinType && product.Category == Category && product.ForSensitive == user.IsSensitive && product.AgeCategory == user.AgeCategory)
+                    if (product.SkinType == user.SkinType && product.Category == Category && product.ForSensitive == user.IsSensitive && (product.AgeCategory == user.AgeCategory || product.AgeCategory == "Universal"))
                     {
                         if (Category == "Makeup Remover")
                             MakeupRemovers.Add(new ProductViewModel(product));
                         else if (Category == "Cleanser")
                             Cleansers.Add(new ProductViewModel(product));
-                        else if (Category == "Hydrating Cream")
-                            HydratingCreams.Add(new ProductViewModel(product));
+                        else if (Category == "Moisturizer")
+                            Moisturizers.Add(new ProductViewModel(product));
                         else SPFs.Add(new ProductViewModel(product));
                     }
                 }

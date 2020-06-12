@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mtdevpjbD8pqr03UCNCRTT+SWMWto9rJzxL9jZplrAgSeqyAel0L9/BQOX2eWZwlwZ74iOloc1ElEZKDZJPfIA==",
+  "dgSpecHash": "xVQUVJJiNSxngVL+g+pv6oAt8zhFEhYRYqY0+IFL0Y6oNdYWAAjfP365jyAwSOZRFSPIZZZFSfK6I0INQP/vTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+    "C:\\Users\\popfl\\.nuget\\packages\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
   "logs": []
 }

@@ -18,11 +18,10 @@ namespace GlowOn.ViewModels.Pages
         public User User { get; private set; }
         public ICommand SaveCommand { get; set; }
 
-        //public IList<string> AgeCategories { get { return AgeCategoriesData.AgeCategories; } }
 
         public FormViewModel(UserViewModel viewModelU, IUsers user, IPageService pageService)
         {
-            if(viewModelU == null)
+            if (viewModelU == null)
                 throw new ArgumentNullException(nameof(viewModelU));
 
             _pageService = pageService;
@@ -41,19 +40,21 @@ namespace GlowOn.ViewModels.Pages
 
         async Task SaveChanges()
         {
-            if((User.SkinType == "Combination") || (User.SkinType == "Normal") || (User.SkinType == "Oily") || (User.SkinType == "Dry"))
+            if ((User.AgeCategory != "14-18") && (User.AgeCategory != "18-30") && (User.AgeCategory != "30-45") && (User.AgeCategory != "45+"))
             {
-                await _user.DeleteUsersAsync();
-                MessagingCenter.Send(this, Events.UsersDeleted);
-                await _user.AddUser(User);
-                MessagingCenter.Send(this, Events.UserAdded, User);
-                await _pageService.PopAsync();
+                await _pageService.DisplayAlert("Error", "Please enter a valid age category.", "OK");
+                return;
             }
-            else
+            if ((User.SkinType != "Combination") && (User.SkinType != "Normal") && (User.SkinType != "Oily") && (User.SkinType != "Dry"))
             {
                 await _pageService.DisplayAlert("Error", "Please enter a valid skintype.", "OK");
                 return;
             }
+            await _user.DeleteUsersAsync();
+            MessagingCenter.Send(this, Events.UsersDeleted);
+            await _user.AddUser(User);
+            MessagingCenter.Send(this, Events.UserAdded, User);
+            await _pageService.PopAsync();
         }
     }
 }

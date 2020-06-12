@@ -32,5 +32,9 @@ namespace GlowOn.DBServices
         {
             return await _connection.FindAsync<User>(id);
         }
+        public async Task UpdateUser(User user)
+        {
+            await _connection.UpdateAsync(user);
+        }
     }
 }

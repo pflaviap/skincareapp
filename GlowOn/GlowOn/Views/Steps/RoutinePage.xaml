@@ -4,17 +4,24 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="GlowOn.Views.Steps.RoutinePage">
+             x:Class="GlowOn.Views.Steps.RoutinePage"
+             Title="Routine Builder">
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout   AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="50">
             <Label Text="A correct skin care routine is always composed of at least 4 steps. Select each option below in order to find out more about them."
-                            FontSize="20" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" FontAttributes="Bold" TextColor="#CD1954"/>
-            <ImageButton x:Name="btnMakeupRemover" Clicked="Step1Clicked" BackgroundColor="Transparent" WidthRequest="160" HeightRequest="80"/>
-            <ImageButton x:Name="btnCleanser" Clicked="Step2Clicked" BackgroundColor="Transparent" WidthRequest="160" HeightRequest="80"/>
-            <ImageButton x:Name="btnMoisturizer" Clicked="Step3Clicked" BackgroundColor="Transparent" WidthRequest="160" HeightRequest="80"/>
-            <ImageButton x:Name="btnSPF" Clicked="Step4Clicked" BackgroundColor="Transparent" WidthRequest="160" HeightRequest="80"/>
+                            FontSize="25" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <ImageButton x:Name="btnMakeupRemover" Clicked="Step1Clicked" BackgroundColor="Transparent"  HeightRequest="80" WidthRequest="20"/>
+            <ImageButton x:Name="btnCleanser" Clicked="Step2Clicked" BackgroundColor="Transparent" HeightRequest="80" WidthRequest="20"/>
+            <ImageButton x:Name="btnMoisturizer" Clicked="Step3Clicked" BackgroundColor="Transparent"  HeightRequest="80" WidthRequest="20"/>
+            <ImageButton x:Name="btnSPF" Clicked="Step4Clicked" BackgroundColor="Transparent" HeightRequest="80" WidthRequest="20"/>
          </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

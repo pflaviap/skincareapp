@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GlowOn.Views.Products.ProductsDetail.xaml", "Views/Products/ProductsDetail.xaml", typeof(global::GlowOn.Views.ProductsDetail))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GlowOn.Views.Products.ProductsDetail.xaml", "Views/Products/ProductsDetail.xaml", typeof(global::GlowOn.Views.Products.ProductsDetail))]
 
-namespace GlowOn.Views {
+namespace GlowOn.Views.Products {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Products\\ProductsDetail.xaml")]

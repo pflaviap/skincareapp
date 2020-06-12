@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GlowOn.Views.ProductsEditor">
+
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
+            <TableView Intent="Form" Margin="0" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" HasUnevenRows="True">
+            <TableRoot>
+                    <TableSection>
+                        <ViewCell Height="80">
+                            <StackLayout Spacing="10">
+                                <Label Text="Name*:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="Name" Text="{Binding Path=Product.ProductName}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="80">
+                            <StackLayout Spacing="10">
+                                <Label Text="Brand:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="Brand" Text="{Binding Path=Product.Brand}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="80">
+                            <StackLayout Spacing="10">
+                                <Label Text="Skin type*:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="Dry / Oily / Combination / Normal" Text="{Binding Path=Product.SkinType}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="80">
+                            <StackLayout Spacing="10">
+                                <Label Text="Category*:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="Makeup Remover / Cleanser / Moisturizer / SPF" Text="{Binding Path=Product.Category}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="200">
+                            <StackLayout Spacing="10">
+                                <Label Text="Ingredients:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Editor Placeholder="Ingredients" Text="{Binding Path=Product.Ingredients}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Editor.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Editor.FontFamily>
+                                </Editor>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="80">
+                            <StackLayout Spacing="10">
+                                <Label Text="Age category*:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="14-18 / 18-30 / 30-45 / 45+ / Universal" Text="{Binding Path=Product.AgeCategory}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="80">
+                            <StackLayout Spacing="15">
+                                <Label Text="For sensitive skin:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <CheckBox IsChecked="{Binding Path=Product.ForSensitive}" HorizontalOptions="Center" Color="#cf95be"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="28">
+                            <StackLayout Spacing="10">
+                                <Label Text="Suggested Price*:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="Suggested Price" Text="{Binding Path=Product.SuggestedPrice}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                    </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <ImageButton x:Name="btnSave" Command="{Binding SaveCommand}" BackgroundColor="Transparent"/>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+            </TableView>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

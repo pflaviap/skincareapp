@@ -6,22 +6,38 @@
              mc:Ignorable="d"
              x:Name="productsCatalogue"
              x:Class="GlowOn.Views.ProductsCatalogue"
-             Title="Products catalogue">
+             Title="Products Catalogue">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddProductCommand}"/>
     </ContentPage.ToolbarItems>
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
-            <SearchBar Placeholder="Search products..." SearchCommand="{Binding SearchCommand}" CancelButtonColor="HotPink" PlaceholderColor="Black" TextColor="Honeydew" HorizontalTextAlignment="Center" FontSize="22" BackgroundColor="Transparent"></SearchBar>
-            <ListView ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}" HasUnevenRows="True" SeparatorColor="Pink" ItemSelected="OnProductSelected" BackgroundColor="Transparent">
+            <ListView ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}" HasUnevenRows="True" SeparatorColor="Pink" ItemSelected="OnProductSelected" BackgroundColor="Transparent" RowHeight="50">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell ImageSource="{Binding ProductImage}" Text="{Binding ProductName}" Detail="{Binding Brand}" DetailColor="Black" TextColor="Pink">
-                            <ImageCell.ContextActions>
+                        <ViewCell>
+                            <StackLayout Spacing="10">
+                                <Label Text="{Binding ProductName}" FontSize="25" HorizontalOptions="Center"  VerticalOptions="Center"  TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#8f006b">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Image Source="{Binding ProductImage}" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <ViewCell.ContextActions>
                                 <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference productsCatalogue}, Path=ViewModel.DeleteProductCommand}" CommandParameter="{Binding .}"/>
-                            </ImageCell.ContextActions>
-                        </ImageCell>
+                            </ViewCell.ContextActions>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

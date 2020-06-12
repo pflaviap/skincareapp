@@ -10,7 +10,7 @@ using GlowOn.ViewModels;
 using GlowOn.ViewModels.Pages;
 using GlowOn.DBServices;
 
-namespace GlowOn.Views
+namespace GlowOn.Views.Products
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductsDetail : ContentPage
@@ -21,7 +21,6 @@ namespace GlowOn.Views
             imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
             var productStore = new SQLiteProductCatalogue(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
-            Title = (viewModel.ProductName == null) ? "New Product" : "Edit Product";
             BindingContext = new ProductsDetailViewModel(viewModel ?? new ProductViewModel(), productStore, pageService);
         }
     }

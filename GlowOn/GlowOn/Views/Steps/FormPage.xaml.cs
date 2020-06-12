@@ -19,6 +19,7 @@ namespace GlowOn.Views
         {
             InitializeComponent();
             imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
+            btnSaveChanges.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnSaveChanges.png");
             var user = new SQLiteUsers(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             BindingContext = new FormViewModel(new UserViewModel(), user, pageService);

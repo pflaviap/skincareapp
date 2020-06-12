@@ -12,5 +12,6 @@ namespace GlowOn.ViewModels.Interfaces
         Task AddUser(User routineUser);
         Task<User> GetUser(int id);
         Task<int> DeleteUsersAsync();
+        Task UpdateUser(User routineUser);
     }
 }

@@ -2,19 +2,18 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using GlowOn.Views;
-using GlowOn.ViewModels;
 
 namespace GlowOn
 {
     public partial class App : Application
     {
+        
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new MainPage())
             {
-                BarBackgroundColor = Color.FromHex("#CD1954"),
+                BarBackgroundColor = Color.FromHex("#EC3E93"),
                 BarTextColor = Color.FloralWhite
         };
         }

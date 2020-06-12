@@ -8,24 +8,77 @@
              Title="Details">
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
-        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
-
-            <TableView Intent="Form" Margin="16,0" BackgroundColor="Transparent">
+        <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="60">
+            <TableView Intent="Form" Margin="0" BackgroundColor="Transparent" HeightRequest="500" RowHeight="100" VerticalOptions="Start">
                 <TableRoot>
-                    <TableSection Title="About you" >
-                        <TextCell Text="Fill in the right age cathegory from the list: 10-18, 19-29, 30-50 and 50+ and " />
-                        <EntryCell Label="Age Category: " Text="{Binding Path=User.AgeCategory}"/>
-                        <TextCell Text="Please choose a skintype from the "/>
-                        <EntryCell Label="Skintype: " Text="{Binding Path=User.SkinType}"/>
-                        <SwitchCell Text="Skin sensitivity: " On="{Binding Path=User.IsSensitive}"/>
-                    </TableSection>
                     <TableSection>
                         <ViewCell>
-                            <Button Text="Save changes" Command="{Binding SaveCommand}"/>
+                            <StackLayout Spacing="20">
+                                <Label Text="About you" FontSize="40" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Spacing="20">
+                                <Label Text="Age category:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="14-18 / 18-30 / 30-45 / 45+" PlaceholderColor="#cf95be" Text="{Binding Path=User.AgeCategory}" TextColor="#8f006b">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Spacing="20">
+                                <Label Text="Skin type:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry Placeholder="Dry / Oily / Combination / Normal" PlaceholderColor="#cf95be" Text="{Binding Path=User.SkinType}" TextColor="#8f006b">
+                                    <Entry.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Entry.FontFamily>
+                                </Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Spacing="15">
+                                <Label Text="Sensitive skin:" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <CheckBox IsChecked="{Binding Path=User.IsSensitive}" HorizontalOptions="Center" Color="#cf95be"/>
+                            </StackLayout>
                         </ViewCell>
                     </TableSection>
                 </TableRoot>
             </TableView>
+            <ImageButton x:Name="btnSaveChanges" Command="{Binding SaveCommand}" BackgroundColor="Transparent"  VerticalOptions="Center" HeightRequest="70" WidthRequest="100"/>
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

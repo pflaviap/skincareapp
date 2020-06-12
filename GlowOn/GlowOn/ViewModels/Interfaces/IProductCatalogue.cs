@@ -13,5 +13,6 @@ namespace GlowOn.ViewModels.Interfaces
         Task AddProduct(Product product);
         Task UpdateProduct(Product product);
         Task DeleteProduct(Product product);
+        Task AddOrReplace(Product product);
     }
 }

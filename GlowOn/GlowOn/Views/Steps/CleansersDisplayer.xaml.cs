@@ -19,14 +19,15 @@ namespace GlowOn.Views
         {
             InitializeComponent();
             imgBackground.Source = ImageSource.FromResource("GlowOn.Assets.Images.background.jpg");
-            btnAttributes.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnAttributes.png");
+            imgCleanser.Source = ImageSource.FromResource("GlowOn.Assets.Images.cleanser.png");
+            btnPersonalInfo.Source = ImageSource.FromResource("GlowOn.Assets.Images.btnPersonalInfo.png");
             var routineUsers = new SQLiteUsers(DependencyService.Get<ISQLiteDb>());
             var products = new SQLiteProductCatalogue(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             ViewModel = new DisplayerViewModel(routineUsers, products, pageService, "Cleanser");
         }
 
-        private async void ChangeAttributesClicked(object sender, EventArgs e)
+        private async void ChangePersonalInfoClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FormPage(new UserViewModel()));
         }

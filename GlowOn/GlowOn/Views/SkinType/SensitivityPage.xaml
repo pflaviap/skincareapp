@@ -8,39 +8,110 @@
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
-            <Label Text="Sensitivity quiz" FontSize="28" FontFamily="Times New Roman" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#CD1954"/>
-            <Label Text="When you try a new product, does your skin usually react negatively?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#CD1954"/>
+            <Label Text="Sensitivity quiz" FontSize="28" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#CD1954">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label Text="When you try a new product, does your skin usually react negatively?" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                </OnPlatform>
+                </Label.FontFamily>
+            </Label>
             <Picker Title="Select an option"
                     ItemsSource="{Binding Q1Options}"
                     ItemDisplayBinding="{Binding Description}"
-                    SelectedItem="{Binding SelectedQ1}" />
-            <Label Text="After washing your face, is it usually red, irritated, even burning at times?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#CD1954"/>
+                    SelectedItem="{Binding SelectedQ1}" 
+                    TitleColor="#cf95be" TextColor="#8f006b">
+                <Picker.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Picker.FontFamily>
+            </Picker>
+            <Label Text="After washing your face, is it usually red, irritated, even burning at times?" FontSize="23" HorizontalOptions="Center"
+                        VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                </OnPlatform>
+                </Label.FontFamily>
+            </Label>
             <Picker Title="Select an option"
                     ItemsSource="{Binding Q2Options}"
                     ItemDisplayBinding="{Binding Description}"
-                    SelectedItem="{Binding SelectedQ2}" />
-            <Label Text="Can you sometimes spot dry patches?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#CD1954"/>
+                    SelectedItem="{Binding SelectedQ2}" 
+                    TitleColor="#cf95be" TextColor="#8f006b">
+                <Picker.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Picker.FontFamily>
+            </Picker>
+            <Label Text="Can you sometimes spot dry patches?" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
             <Picker Title="Select an option"
                     ItemsSource="{Binding Q3Options}"
                     ItemDisplayBinding="{Binding Description}"
-                    SelectedItem="{Binding SelectedQ3}" />
-            <Label Text="Do sunrays make your skin rash after only a few minutes of contact?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#CD1954"/>
+                    SelectedItem="{Binding SelectedQ3}" 
+                    TitleColor="#cf95be" TextColor="#8f006b">
+                <Picker.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Picker.FontFamily>
+            </Picker>
+            <Label Text="Do sunrays make your skin rash after only a few minutes of contact?" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
             <Picker Title="Select an option"
                     ItemsSource="{Binding Q4Options}"
                     ItemDisplayBinding="{Binding Description}"
-                    SelectedItem="{Binding SelectedQ4}" />
-            <Label Text="Does your skin break out easily?" FontSize="23" FontFamily="Roboto" HorizontalOptions="Center"
-                            VerticalOptions="Center" TextColor="#CD1954"/>
+                    SelectedItem="{Binding SelectedQ4}" 
+                    TitleColor="#cf95be" TextColor="#8f006b">
+                <Picker.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Picker.FontFamily>
+            </Picker>
+            <Label Text="Does your skin break out easily?" FontSize="23" HorizontalOptions="Center"
+                            VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
             <Picker Title="Select an option"
                     ItemsSource="{Binding Q5Options}"
                     ItemDisplayBinding="{Binding Description}"
-                    SelectedItem="{Binding SelectedQ5}" />
-            <ImageButton x:Name="btnResult" Command="{Binding ResultsCommand}" BackgroundColor="Transparent" WidthRequest="130" HeightRequest="80"></ImageButton>
+                    SelectedItem="{Binding SelectedQ5}" 
+                    TitleColor="#cf95be" TextColor="#8f006b">
+                <Picker.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Picker.FontFamily>
+            </Picker>
+            <ImageButton x:Name="btnResult" Command="{Binding ResultsCommand}" BackgroundColor="Transparent"  HeightRequest="70" WidthRequest="15"></ImageButton>
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

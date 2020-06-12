@@ -20,7 +20,8 @@ namespace GlowOn.ViewModels
             _category = product.Category;
             _ingredients = product.Ingredients;
             _ageCategory = product.AgeCategory;
-            _extraInfo = product.ExtraInfo;
+            _suggestedPrice = product.SuggestedPrice;
+            _isInitial = product.IsInitial;
         }
 
         private string _productName;
@@ -30,7 +31,6 @@ namespace GlowOn.ViewModels
             set
             {
                 SetValue(ref _productName, value);
-                OnPropertyChanged(nameof(ProductName));
             }
         }
 
@@ -41,7 +41,6 @@ namespace GlowOn.ViewModels
             set
             {
                 SetValue(ref _brand, value);
-                OnPropertyChanged(nameof(Brand));
             }
         }
 
@@ -52,7 +51,6 @@ namespace GlowOn.ViewModels
             set
             {
                 SetValue(ref _skinType, value);
-                OnPropertyChanged(nameof(SkinType));
             }
         }
 
@@ -73,7 +71,7 @@ namespace GlowOn.ViewModels
             set
             {
                 SetValue(ref _category, value);
-                OnPropertyChanged(nameof(Category));
+                OnPropertyChanged(nameof(ProductImage));
             }
         }
 
@@ -84,7 +82,6 @@ namespace GlowOn.ViewModels
             set
             {
                 SetValue(ref _ingredients, value);
-                OnPropertyChanged(nameof(Ingredients));
             }
         }
 
@@ -95,18 +92,45 @@ namespace GlowOn.ViewModels
             set
             {
                 SetValue(ref _ageCategory, value);
-                OnPropertyChanged(nameof(AgeCategory));
             }
         }
 
-        private string _extraInfo;
-        public string ExtraInfo
+        private string _suggestedPrice;
+        public string SuggestedPrice
         {
-            get { return _extraInfo; }
+            get { return _suggestedPrice; }
             set
             {
-                SetValue(ref _extraInfo, value);
-                OnPropertyChanged(nameof(ExtraInfo));
+                SetValue(ref _suggestedPrice, value);
+            }
+        }
+
+        private bool _isInitial;
+        public bool IsInitial
+        {
+            get { return _isInitial; }
+            set
+            {
+                SetValue(ref _isInitial, value);
+            }
+        }
+        public ImageSource ProductImage
+        {
+            get
+            {
+                if (Category == "Makeup Remover")
+                {
+                    return ImageSource.FromResource("GlowOn.Assets.Images.makeupRemover.png");
+                }
+                if (Category == "Cleanser")
+                {
+                    return ImageSource.FromResource("GlowOn.Assets.Images.cleanser.png");
+                }
+                if(Category == "Moisturizer")
+                {
+                    return ImageSource.FromResource("GlowOn.Assets.Images.moisturizer.png");
+                }
+                return ImageSource.FromResource("GlowOn.Assets.Images.SPF.png");
             }
         }
     }

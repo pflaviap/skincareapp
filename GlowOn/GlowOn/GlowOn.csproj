@@ -12,38 +12,55 @@
 
   <ItemGroup>
     <None Remove="Assets\Images\background.jpg" />
-    <None Remove="Assets\Images\btnAttributes.png" />
     <None Remove="Assets\Images\btnCatalogue.png" />
     <None Remove="Assets\Images\btnCleanser.png" />
     <None Remove="Assets\Images\btnGetResults.png" />
     <None Remove="Assets\Images\btnMakeupRemover.png" />
     <None Remove="Assets\Images\btnMoisturizer.png" />
+    <None Remove="Assets\Images\btnPersonalInfo.png" />
     <None Remove="Assets\Images\btnRoutine.png" />
+    <None Remove="Assets\Images\btnSave.png" />
+    <None Remove="Assets\Images\btnSaveChanges.png" />
     <None Remove="Assets\Images\btnSensitivityQuiz.png" />
     <None Remove="Assets\Images\btnSkintype.png" />
     <None Remove="Assets\Images\btnSkintypeQuiz.png" />
     <None Remove="Assets\Images\btnSPF.png" />
+    <None Remove="Assets\Images\cleanser.png" />
     <None Remove="Assets\Images\logo.png" />
+    <None Remove="Assets\Images\makeupRemover.png" />
+    <None Remove="Assets\Images\moisturizer.png" />
+    <None Remove="Assets\Images\SPF.png" />
+    <None Remove="Assets\moisturizer.png" />
+    <None Remove="Assets\SPF.png" />
     <None Remove="Views\cv.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\Images\btnAttributes.png" />
-    <EmbeddedResource Include="Assets\Images\btnCleanser.png" />
-    <EmbeddedResource Include="Assets\Images\btnGetResults.png" />
-    <EmbeddedResource Include="Assets\Images\btnMoisturizer.png" />
-    <EmbeddedResource Include="Assets\Images\btnSensitivityQuiz.png" />
+    <EmbeddedResource Include="Assets\Images\cleanser.png" />
+    <EmbeddedResource Include="Assets\Images\makeupRemover.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\btnCatalogue.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\Images\background.jpg" />
-    <EmbeddedResource Include="Assets\Images\btnCatalogue.png" />
+    <EmbeddedResource Include="Assets\Images\btnCleanser.png" />
+    <EmbeddedResource Include="Assets\Images\btnGetResults.png" />
+    <EmbeddedResource Include="Assets\Images\btnMakeupRemover.png" />
+    <EmbeddedResource Include="Assets\Images\btnMoisturizer.png" />
+    <EmbeddedResource Include="Assets\Images\btnPersonalInfo.png" />
     <EmbeddedResource Include="Assets\Images\btnRoutine.png" />
+    <EmbeddedResource Include="Assets\Images\btnSave.png" />
+    <EmbeddedResource Include="Assets\Images\btnSaveChanges.png" />
+    <EmbeddedResource Include="Assets\Images\btnSensitivityQuiz.png" />
     <EmbeddedResource Include="Assets\Images\btnSkintype.png" />
     <EmbeddedResource Include="Assets\Images\btnSkintypeQuiz.png" />
-    <EmbeddedResource Include="Assets\Images\btnMakeupRemover.png" />
     <EmbeddedResource Include="Assets\Images\btnSPF.png" />
     <EmbeddedResource Include="Assets\Images\logo.png" />
+    <EmbeddedResource Include="Assets\Images\moisturizer.png" />
+    <EmbeddedResource Include="Assets\Images\SPF.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,11 +73,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Products\ProductsDetail.xaml.cs">
+      <DependentUpon>ProductsDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Products\ProductsEditor.xaml.cs">
+      <DependentUpon>ProductsEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\SkinType\SkinTypePage.xaml.cs">
       <DependentUpon>SkinTypePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\SkinType\QuizPage.xaml.cs">
       <DependentUpon>QuizPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Steps\MoisturizersDisplayer.xaml.cs">
+      <DependentUpon>MoisturizersDisplayer.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Steps\MakeupRemoversDisplayer.xaml.cs">
       <DependentUpon>MakeupRemoversDisplayer.xaml</DependentUpon>
@@ -71,6 +97,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\Products\ProductsDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\SkinType\SensitivityPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -80,13 +109,13 @@
     <EmbeddedResource Update="Views\Steps\CleansersDisplayer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Steps\HydratingCreamsDisplayer.xaml">
+    <EmbeddedResource Update="Views\Steps\MoisturizersDisplayer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Products\ProductsCatalogue.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Products\ProductsDetail.xaml">
+    <EmbeddedResource Update="Views\Products\ProductsEditor.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Steps\MakeupRemoversDisplayer.xaml">

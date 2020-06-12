@@ -16,6 +16,7 @@ namespace GlowOn.Models
         public string AgeCategory { get; set; }
         public string Ingredients { get; set; }
         public bool ForSensitive { get; set; }
-        public string ExtraInfo { get; set; }
+        public string SuggestedPrice { get; set; }
+        public bool IsInitial { get; set; }
     }
 }

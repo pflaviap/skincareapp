@@ -4,14 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="GlowOn.Views.SkinType.QuizPage">
+             x:Class="GlowOn.Views.SkinType.QuizPage"
+             x:Title="Skin type tests">
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="130">
-            <Label Text="Take the tests below to get to know your skintype and level of sensitivity." FontSize="30" FontFamily="Roboto" HorizontalOptions="Center" 
-                        VerticalOptions="Center" TextColor="#CD1954"/>
-            <ImageButton x:Name="btnSkintype" Clicked="SkintypeClicked" BackgroundColor="Transparent" WidthRequest="180" HeightRequest="100"/>
-            <ImageButton x:Name="btnSensitivity" Clicked="SensitivityClicked" BackgroundColor="Transparent" WidthRequest="180" HeightRequest="100"/>
+            <Label Text="Take the tests below to get to know your skintype and level of sensitivity." FontSize="30" HorizontalOptions="Center" 
+                        VerticalOptions="Center" TextColor="#EC3E93">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <ImageButton x:Name="btnSkintype" Clicked="SkintypeClicked" BackgroundColor="Transparent"  HeightRequest="90" WidthRequest="30"/>
+            <ImageButton x:Name="btnSensitivity" Clicked="SensitivityClicked" BackgroundColor="Transparent"  HeightRequest="90" WidthRequest="30"/>
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

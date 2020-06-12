@@ -31,7 +31,7 @@ namespace GlowOn.Views.Steps
         }
         private async void Step3Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HydratingCreamsDisplayer());
+            await Navigation.PushAsync(new MoisturizersDisplayer());
         }
         private async void Step4Clicked(object sender, EventArgs e)
         {

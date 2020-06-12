@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tngKiH6i4OQKKWwCdsgW0Zxdaf1PcWidfCTzBMcmfjV9JLoWfZy8HKu/ES+fhClibg9t3M9Z6lfeWjK88u9REQ==",
+  "dgSpecHash": "e0xhRYxjCUuxZdIjYqrODEk6AA2y2OLUCzWNqdayU6RczM9GIzYRhu6ZsWDyIPE8E4T8DB7HWXw8Do3g6yuR1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\popfl\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\popfl\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+    "C:\\Users\\popfl\\.nuget\\packages\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
   "logs": []
 }

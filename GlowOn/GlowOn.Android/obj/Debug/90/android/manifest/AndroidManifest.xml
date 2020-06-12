@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.glowon">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.glowon" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="20" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="GlowOn.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+  <application android:label="GlowOn.Android" android:allowBackup="false" android:fullBackupContent="false" android:name="android.app.Application" android:icon="@mipmap/icon" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="GlowOn" android:theme="@style/MainTheme" android:name="crc640506bb6eac5b40e2.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

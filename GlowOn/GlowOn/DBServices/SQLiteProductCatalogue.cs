@@ -23,6 +23,11 @@ namespace GlowOn.DBServices
             return await _connection.Table<Product>().ToListAsync();
         }
 
+        public async Task AddOrReplace(Product product)
+        {
+            await _connection.InsertOrReplaceAsync(product);
+        }
+
         public async Task DeleteProduct(Product product)
         {
             await _connection.DeleteAsync(product);

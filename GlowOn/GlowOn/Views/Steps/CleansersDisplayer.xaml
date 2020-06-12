@@ -9,60 +9,102 @@
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image x:Name="imgBackground" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
-            <Frame CornerRadius="10" Padding="4" BorderColor="#CD1954" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
+            <Frame CornerRadius="10" Padding="4" BorderColor="#EC3E93" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
                 <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Transparent">
-                        <Label Text="About your skin" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
-                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#CD1954"/>
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontSize="18" Text="Skin type:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
-                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextCell Text="{Binding SkinType}" TextColor="#660066"></TextCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontSize="18" Text="Sensitive:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
-                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextCell Text="{Binding IsSensitive}" TextColor="#CD1954"></TextCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label FontSize="18" Text="Age category:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
-                            <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextCell Text="{Binding AgeCategory}" TextColor="#CD1954"></TextCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                    <ImageButton x:Name="btnAttributes" Clicked="ChangeAttributesClicked" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="80"/>
+                    <Label Text="About your skin" FontSize="28" HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#EC3E93">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" Text="Skin type:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" >
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding SkinType}" TextColor="#8f006b"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" Text="Sensitive:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" >
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding IsSensitive}" TextColor="#8f006b"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" Text="Age category:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" >
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding AgeCategory}" TextColor="#8f006b"></TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <ImageButton x:Name="btnPersonalInfo" Clicked="ChangePersonalInfoClicked" BackgroundColor="Transparent"  HeightRequest="60" WidthRequest="20"/>
                 </StackLayout>
-                </Frame>
-                <StackLayout>
-                    <Label Text="Cleansers" FontSize="28" FontFamily="Roboto" HorizontalOptions="Center"
-                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#CD1954"/>
-                <Frame CornerRadius="10" Padding="4" BorderColor="#CD1954" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
-                        <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Transparent">
-                            <Label FontSize="18" Text="Products:" TextColor="#CD1954" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
-                            <CarouselView ItemsSource="{Binding Cleansers}">
-                                <CarouselView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackLayout>
-                                            <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#CD1954"></Label>
-                                            <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#CD1954"></Label>
-                                        </StackLayout> 
-                                    </DataTemplate>
-                                </CarouselView.ItemTemplate>
-                            </CarouselView>
-                        </StackLayout>
+            </Frame>
+            <StackLayout>
+                <Label Text="Cleansers" FontSize="28"  HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold" TextColor="#EC3E93">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Frame CornerRadius="10" Padding="4" BorderColor="#EC3E93" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
+                    <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Transparent">
+                        <Image x:Name="imgCleanser" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"/>
+                        <CarouselView ItemsSource="{Binding Cleansers}">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#EC3E93">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#EC3E93">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                    </StackLayout>
                 </Frame>
             </StackLayout>
         </StackLayout>
