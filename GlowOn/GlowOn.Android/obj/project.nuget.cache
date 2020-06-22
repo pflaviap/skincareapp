@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xVQUVJJiNSxngVL+g+pv6oAt8zhFEhYRYqY0+IFL0Y6oNdYWAAjfP365jyAwSOZRFSPIZZZFSfK6I0INQP/vTA==",
+  "dgSpecHash": "7AFKVYOEyKguxfOgGylHtn4r1JXxTyRgCS/NMNtc1r4aRb7Qtc0nuOK3BBMsTT/noqJB9/HPP/9B+JN8Qq43tA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
+  "projectFilePath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\popfl\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
     "C:\\Users\\popfl\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",

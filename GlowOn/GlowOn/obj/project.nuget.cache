@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e0xhRYxjCUuxZdIjYqrODEk6AA2y2OLUCzWNqdayU6RczM9GIzYRhu6ZsWDyIPE8E4T8DB7HWXw8Do3g6yuR1w==",
+  "dgSpecHash": "U09wgg+2AOxZwyCL0pZq8exlEll+Sanp3KwamgdmgldG3txBtwr+mtz4PDEDqrg4hXQ9C/jbxK7v+aJ9Wg5k8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj",
+  "projectFilePath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\GlowOn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\popfl\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\popfl\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

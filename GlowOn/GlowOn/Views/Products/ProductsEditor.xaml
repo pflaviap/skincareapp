@@ -98,7 +98,7 @@
                                         </OnPlatform>
                                     </Label.FontFamily>
                                 </Label>
-                                <Editor Placeholder="Ingredients" Text="{Binding Path=Product.Ingredients}" TextColor="#8f006b" PlaceholderColor="#cf95be">
+                                <Editor AutoSize="TextChanges" Placeholder="Ingredients" Text="{Binding Path=Product.Ingredients}" TextColor="#8f006b" PlaceholderColor="#cf95be">
                                     <Editor.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
@@ -139,7 +139,7 @@
                                 <CheckBox IsChecked="{Binding Path=Product.ForSensitive}" HorizontalOptions="Center" Color="#cf95be"/>
                             </StackLayout>
                         </ViewCell>
-                        <ViewCell Height="28">
+                        <ViewCell Height="80">
                             <StackLayout Spacing="10">
                                 <Label Text="Suggested Price*:" FontSize="23" HorizontalOptions="Center"
                             VerticalOptions="Center" TextColor="#EC3E93">
@@ -160,7 +160,7 @@
                         </ViewCell>
                     </TableSection>
                 <TableSection>
-                    <ViewCell>
+                    <ViewCell Height="80">
                         <ImageButton x:Name="btnSave" Command="{Binding SaveCommand}" BackgroundColor="Transparent"/>
                     </ViewCell>
                 </TableSection>

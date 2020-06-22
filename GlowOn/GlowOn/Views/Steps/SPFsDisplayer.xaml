@@ -11,7 +11,7 @@
         <StackLayout  AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
             <Frame CornerRadius="10" Padding="4" BorderColor="#EC3E93" HeightRequest="320" InputTransparent="False" Margin="0,20,0,0" Opacity="3" BackgroundColor="Transparent">
                 <StackLayout HeightRequest="320" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Transparent">
-                    <Label Text="About your skin" FontSize="28"  HorizontalOptions="Center"
+                    <Label Text="About your skin" FontSize="28" HorizontalOptions="Center"
                         VerticalOptions="Center" FontAttributes="Bold" TextColor="#EC3E93">
                         <Label.FontFamily>
                             <OnPlatform x:TypeArguments="x:String">
@@ -20,7 +20,7 @@
                         </Label.FontFamily>
                     </Label>
                     <StackLayout Orientation="Horizontal">
-                        <Label FontSize="18" Text="Skin type:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100">
+                        <Label FontSize="18" Text="Skin type:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" >
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
@@ -30,7 +30,15 @@
                         <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextCell Text="{Binding SkinType}" TextColor="#8f006b"></TextCell>
+                                    <ViewCell>
+                                        <Label Text="{Binding SkinType}" FontSize="17" HorizontalOptions="Center"  VerticalOptions="Center"  TextColor="#8f006b">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
@@ -46,13 +54,21 @@
                         <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextCell Text="{Binding IsSensitive}" TextColor="#8f006b"></TextCell>
+                                    <ViewCell>
+                                        <Label Text="{Binding IsSensitive}" FontSize="17" HorizontalOptions="Center"  VerticalOptions="Center"  TextColor="#8f006b">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label FontSize="18" Text="Age category:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200">
+                        <Label FontSize="18" Text="Age category:" TextColor="#EC3E93" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" >
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
@@ -62,7 +78,15 @@
                         <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding Users}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextCell Text="{Binding AgeCategory}" TextColor="#8f006b"></TextCell>
+                                    <ViewCell>
+                                        <Label Text="{Binding AgeCategory}" FontSize="17" HorizontalOptions="Center"  VerticalOptions="Center"  TextColor="#8f006b">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
@@ -86,14 +110,21 @@
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout>
-                                        <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#EC3E93">
+                                        <Label Text="{Binding ProductName}" HorizontalOptions="Center" TextColor="#EC3E93" FontSize="30">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="BergmannOldStyleBlack-Regular.ttf#BergmannOldStyle"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#8f006b" FontSize="20">
                                             <Label.FontFamily>
                                                 <OnPlatform x:TypeArguments="x:String">
                                                     <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>
                                                 </OnPlatform>
                                             </Label.FontFamily>
                                         </Label>
-                                        <Label Text="{Binding Brand}" HorizontalOptions="Center" TextColor="#EC3E93">
+                                        <Label Text="{Binding SuggestedPrice}" HorizontalOptions="Center" TextColor="#EC3E93" FontSize="25">
                                             <Label.FontFamily>
                                                 <OnPlatform x:TypeArguments="x:String">
                                                     <On Platform="Android" Value="BergmannOldStyle-Bold.ttf#BergmannOldStyle"/>

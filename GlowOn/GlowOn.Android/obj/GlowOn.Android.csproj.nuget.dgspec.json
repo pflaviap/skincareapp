@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj": {}
+    "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj": {
+    "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
+        "projectUniqueName": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
         "projectName": "GlowOn.Android",
-        "projectPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
+        "projectPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn.Android\\GlowOn.Android.csproj",
         "packagesPath": "C:\\Users\\popfl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn.Android\\obj\\",
+        "outputPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj": {
-                "projectPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj"
+              "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\GlowOn.csproj": {
+                "projectPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\GlowOn.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj": {
+    "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\GlowOn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj",
+        "projectUniqueName": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\GlowOn.csproj",
         "projectName": "GlowOn",
-        "projectPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\GlowOn.csproj",
+        "projectPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\GlowOn.csproj",
         "packagesPath": "C:\\Users\\popfl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn\\GlowOn\\GlowOn\\obj\\",
+        "outputPath": "C:\\Users\\popfl\\Desktop\\Facultate\\An3sem2\\Licenta\\MVVM\\GlowOn - ASTA II DE LICENTA\\GlowOn\\GlowOn\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
